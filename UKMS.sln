@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UKMS", "UKMS.csproj", "{BB825708-8FB8-431D-9662-884F23A95A44}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB825708-8FB8-431D-9662-884F23A95A44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB825708-8FB8-431D-9662-884F23A95A44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB825708-8FB8-431D-9662-884F23A95A44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB825708-8FB8-431D-9662-884F23A95A44}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {790A2A8D-AD30-4414-BAD6-6C0419C559D0}
+	EndGlobalSection
+EndGlobal

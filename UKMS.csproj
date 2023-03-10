@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BB825708-8FB8-431D-9662-884F23A95A44}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>UKMS</RootNamespace>
+    <AssemblyName>UKMS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="konfigurasi\konfigurasiDb.cs" />
+    <Compile Include="konfigurasi\layananDb.cs" />
+    <Compile Include="model\obat.cs" />
+    <Compile Include="report\dataKeluhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="report\dataKeluhan.Designer.cs">
+      <DependentUpon>dataKeluhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="report\dataPetugas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dataPetugas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\lapDataKeluhan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lapDataKeluhan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\lapDataPetugas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="report\lapDataPetugas.Designer.cs">
+      <DependentUpon>lapDataPetugas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="report\lapObat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="report\lapObat.Designer.cs">
+      <DependentUpon>lapObat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="report\obat1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>obat1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="view\keluhanPetugas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\keluhanPetugas.Designer.cs">
+      <DependentUpon>keluhanPetugas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\kontenRekamMedis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\kontenRekamMedis.Designer.cs">
+      <DependentUpon>kontenRekamMedis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="model\akun.cs" />
+    <Compile Include="model\keluhan.cs" />
+    <Compile Include="view\daftarKeluhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\daftarKeluhan.Designer.cs">
+      <DependentUpon>daftarKeluhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\daftarPasien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\daftarPasien.Designer.cs">
+      <DependentUpon>daftarPasien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\dataKeluhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\dataKeluhan.designer.cs">
+      <DependentUpon>dataKeluhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\daftarObat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\daftarObat.Designer.cs">
+      <DependentUpon>daftarObat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\kontenObat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\kontenObat.designer.cs">
+      <DependentUpon>kontenObat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\buatAkun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\buatAkun.designer.cs">
+      <DependentUpon>buatAkun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\dashboardAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\dashboardAdmin.Designer.cs">
+      <DependentUpon>dashboardAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\dashboardPetugas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\dashboardPetugas.Designer.cs">
+      <DependentUpon>dashboardPetugas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\dashboardPasien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\dashboardPasien.Designer.cs">
+      <DependentUpon>dashboardPasien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\login.designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\lupaPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\lupaPassword.designer.cs">
+      <DependentUpon>lupaPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\kontenPasien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\kontenPasien.Designer.cs">
+      <DependentUpon>kontenPasien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\kontenPetugas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\kontenPetugas.Designer.cs">
+      <DependentUpon>kontenPetugas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\pasien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\pasien.Designer.cs">
+      <DependentUpon>pasien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\petugas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\petugas.Designer.cs">
+      <DependentUpon>petugas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\splash.Designer.cs">
+      <DependentUpon>splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="report\dataKeluhan.resx">
+      <DependentUpon>dataKeluhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\dataPetugas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>dataPetugas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\lapDataKeluhan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>lapDataKeluhan.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\lapDataPetugas.resx">
+      <DependentUpon>lapDataPetugas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\lapObat.resx">
+      <DependentUpon>lapObat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\obat1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>obat1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\keluhanPetugas.resx">
+      <DependentUpon>keluhanPetugas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\kontenRekamMedis.resx">
+      <DependentUpon>kontenRekamMedis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="view\daftarKeluhan.resx">
+      <DependentUpon>daftarKeluhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\daftarObat.resx">
+      <DependentUpon>daftarObat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\daftarPasien.resx">
+      <DependentUpon>daftarPasien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\dataKeluhan.resx">
+      <DependentUpon>dataKeluhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\kontenObat.resx">
+      <DependentUpon>kontenObat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\buatAkun.resx">
+      <DependentUpon>buatAkun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\dashboardAdmin.resx">
+      <DependentUpon>dashboardAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\dashboardPetugas.resx">
+      <DependentUpon>dashboardPetugas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\dashboardPasien.resx">
+      <DependentUpon>dashboardPasien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\lupaPassword.resx">
+      <DependentUpon>lupaPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\kontenPasien.resx">
+      <DependentUpon>kontenPasien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\kontenPetugas.resx">
+      <DependentUpon>kontenPetugas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\pasien.resx">
+      <DependentUpon>pasien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\petugas.resx">
+      <DependentUpon>petugas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\splash.resx">
+      <DependentUpon>splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="image\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
